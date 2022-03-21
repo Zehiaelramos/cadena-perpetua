@@ -1,8 +1,9 @@
 
 use rand::Rng;
+use arraystring::Error;
 use std::collections::HashMap;
 
-fn main() {
+fn main() -> Result<(), Error> {
 
 	let mut persons = HashMap::new();
 
@@ -31,4 +32,5 @@ fn main() {
 
     println!("El eligo es: {:?}", persons.get(&id));
 
+    Ok(())
 }
