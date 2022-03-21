@@ -28,9 +28,20 @@ fn main() -> Result<(), Error> {
 
     let mut rng = rand::thread_rng();
 
-	let id: u8 = rng.gen_range(0..17);
+	let mut shift: [&str; 3] = [""; 3];
 
-    println!("El eligo es: {:?}", persons.get(&id));
+	shift[0] = "Primer intento:";
+	shift[1] = "Segundo intento:";
+	shift[2] = "La persona condenada va ser...";
+
+	assert_eq!(&shift[1..], &shift[1..]);
+
+	for _msg in shift {
+
+		let id: u8 = rng.gen_range(0..17);
+
+    	println!("{:} {:?}", _msg, persons.get(&id));
+	}
 
     Ok(())
 }
