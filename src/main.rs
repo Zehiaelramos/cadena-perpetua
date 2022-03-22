@@ -40,7 +40,7 @@ fn main() -> Result<(), Error> {
 
 		let id: u8 = rng.gen_range(0..17);
 
-    	println!("{:} {:?}", _msg, players.get(&id));
+    	println!("{} {:?}", _msg, players.get(&id));
 	}
 
     Ok(())
